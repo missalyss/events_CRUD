@@ -1,13 +1,17 @@
 
 exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
   return knex('patrons').del()
     .then(function () {
-      // Inserts seed entries
       return knex('patrons').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
-};
+        {
+          id: 1, first_name: 'Alyssa', last_name: 'Evans', email: 'alyssa@email.com', birthdate: 01-09-1991
+        },
+        {
+          id: 2, first_name: 'Brendon', last_name: 'Helgason', email: 'brendon@email.com', birthdate: 05-02-1985
+        },
+        {
+          id: 3, first_name: 'Sophie', last_name: 'Helgason', email: 'sophie@email.com', birthdate: 01-06-2016
+        }
+      ])
+    })
+}
