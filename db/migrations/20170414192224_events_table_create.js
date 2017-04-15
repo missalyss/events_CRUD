@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     t.boolean('over_21').notNullable()
     t.date('start_datetime').notNullable()
     t.date('end_datetime').notNullable()
+    t.integer('venue_id').notNullable()
     t.timestamps(true, true)
   })
 }
