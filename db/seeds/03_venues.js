@@ -16,5 +16,11 @@ exports.seed = function(knex, Promise) {
         }
 
       ])
+    }).then(function () {
+      return knex.raw(
+        "SELECT setval('venues_id_seq', (SELECT MAX (id) FROM venues))"
+      )
+    }).catch(function (error) {
+      console.error("Red Alert! ", error);
     })
 }

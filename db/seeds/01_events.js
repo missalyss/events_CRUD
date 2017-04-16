@@ -13,5 +13,11 @@ exports.seed = function(knex, Promise) {
           id: 3, title: 'Glittery Titty', description: 'Titties!!!!!!', over_21: true, start_datetime: '03-09-2017 8pm', end_datetime: '03-09-2017 10pm', venue_id: 3
         }
       ])
+    }).then(function () {
+      return knex.raw(
+        "SELECT setval('events_id_seq', (SELECT MAX (id) FROM events))"
+      )
+    }).catch(function (error) {
+      console.error("Red Alert! ", error);
     })
 }

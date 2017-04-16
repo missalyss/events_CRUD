@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     t.string('first_name').notNullable()
     t.string('last_name').notNullable()
     t.string('email').notNullable()
-    t.date('birthdate').notNullable()
+    t.string('birthdate').notNullable()
     t.timestamps(true, true)
   })
 }
