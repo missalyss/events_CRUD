@@ -10,6 +10,30 @@
 <p>{{city}} {{zip}}</p>
 </br>
 <p>Tickets available: {{capacity}}</p>
-
-<a href="#">Register for this event</a>
 {{/each}}
+<form class="form-group" action="#" method="post">
+  <label for="first_name">First Name:</label>
+  <input id="first_name"type="text" name="first_name" value="">
+
+  <label for="last_name">Last Name:</label>
+  <input id="last_name"type="text" name="last_name" value="">
+
+</br>
+
+  <label for="email">Email:</label>
+  <input id="email"type="email" name="email" value="">
+
+  <label for="birthdate">Birthdate:</label>
+  <input id="birthdate"type="date" name="birthdate" value="">
+
+  <select class="custom-select" name="address_id">
+    <label for="ticket"></label>
+    <option selected>Ticket</option>
+    {{#each allTix}}
+    <option name="ticket_id" value="ticket_id">{{type}} ${{price}}</option>
+    {{/each}}
+  </select> </br></br>
+
+<input type="submit" name="" value="Submit">
+
+</form>

@@ -5,7 +5,6 @@ exports.up = function(knex, Promise) {
     t.string('type').notNullable()
     t.integer('price').notNullable()
     t.integer('event_id').notNullable()
-    t.integer('patron_id').notNullable()
     t.timestamps(true, true)
   })
 }

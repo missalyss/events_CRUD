@@ -9,7 +9,7 @@ router.get('/', joinTablesAndRender('patrons/patrons-index'))
 function joinTablesAndRender(location){
   return function (req, res, next) {
     knex('patrons').then(allPatrons => {
-        res.render(location, {allPatrons})
+        res.render(location, {allPatrons}) 
     })
   }
 }
