@@ -1,5 +1,6 @@
-{{#each eventsAndVenues}}
-<a href="/events/{{id}}"><h2>{{title}}</h2></a>
+<h1>This event:</h1>
+{{#each oneEvent}}
+<h2>{{title}}</h2>
 <p>{{description}}</p>
 {{#if over_21}} <p>This is a 21+ event.</p> {{/if}}
 <p>{{start_datetime}} - {{end_datetime}}</p>
@@ -11,6 +12,4 @@
 <p>Tickets available: {{capacity}}</p>
 
 <a href="#">Register for this event</a>
-</br>
-<hr />
 {{/each}}
